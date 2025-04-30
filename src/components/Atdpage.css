@@ -1,0 +1,125 @@
+.atd-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.atd-preview-area {
+  flex: 1;
+  box-sizing: border-box;
+  overflow: scroll;
+
+  .container2 {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: lightgrey;
+  }
+
+  .container2 .image-container {
+    width: max-content;
+    height: max-content;
+    object-fit: contain;
+  }
+
+  .container2 .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+/* Custom slim scrollbars */
+.atd-preview-area::-webkit-scrollbar {
+  width: 6px; /* Width of the vertical scrollbar */
+  height: 6px; /* Height of the horizontal scrollbar */
+}
+
+.atd-preview-area::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark gray thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.atd-preview-area::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* Lighter track color */
+}
+
+.atd-controls {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 12px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  gap: 12px;
+}
+
+/* Common styles for form elements */
+.atd-controls input[type="file"],
+.atd-controls select,
+.atd-controls input[type="range"],
+.atd-controls button {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.atd-controls input[type="file"]:hover,
+.atd-controls select:hover,
+.atd-controls input[type="range"]:hover,
+.atd-controls button:hover {
+  border-color: #888;
+}
+
+/* Button specific styles */
+.atd-controls button {
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100px;
+}
+
+.atd-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Range slider specific styles */
+.atd-controls .slider-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atd-controls input[type="range"] {
+  width: 120px;
+}
+
+/* Select dropdown */
+.atd-controls select {
+  min-width: 120px;
+}
+
+/* File input label */
+.atd-controls .file-upload-label {
+  display: inline-block;
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.atd-controls .file-upload-label:hover {
+  background-color: #5a6268;
+}
+
+.atd-controls input[type="file"] {
+  display: none; /* hide the ugly default */
+}
